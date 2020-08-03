@@ -25,7 +25,7 @@ class Deque<T> {
         if (this.isEmpty()) return ''
         let objString = `${this.data[this.lowCount]}`
         for (let i = this.lowCount + 1; i < this.count; i++) {
-            objString += `${this.data[i]}`
+            objString += ` ${this.data[i]}`
         }
         return objString
     }
@@ -53,8 +53,8 @@ class Deque<T> {
 
     removeBack () {
         if (this.isEmpty()) return
-        const result = this.data[this.count]
-        delete this.data[this.count]
+        const result = this.data[this.count - 1]
+        delete this.data[this.count - 1]
         this.count--
         return result
     }
@@ -75,3 +75,5 @@ class Deque<T> {
         return this.data[this.count]
     }
 }
+
+export default Deque
