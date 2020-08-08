@@ -1,1 +1,1 @@
-import './queue/palindrome'
+import './linkedList/test'
